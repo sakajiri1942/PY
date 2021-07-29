@@ -1,3 +1,3 @@
-a = 'Hello'
+a = 'Hello World'
 if 'H' in a:
-    print('Hがありました')
+    print(a)
