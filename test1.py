@@ -1,3 +1,4 @@
-a = 'Hello'
-if 'H' in a:
-    print('Hがありました')
+変数 = 0
+
+変数=変数+3
+print(変数)
