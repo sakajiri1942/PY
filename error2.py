@@ -1,1 +1,2 @@
+aaa = 'ABC'
 print(aaa)

@@ -1,3 +1,1 @@
-aaa = 'あああ'
-if ’あ’　in aaa:
- bbb = 1
+print('あ')
