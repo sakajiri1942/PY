@@ -2,7 +2,9 @@
 #C:\Users\sakajiri\PycharmProjects\niku\テスト用.text
 # <pre>・月日&#009;：&#009;10/21</pre>
 
-harituke_f = 'C:/Users/sakajiri/PycharmProjects/niku/テスト用.text'
+a = 'a' + str(1)
+
+harituke_f = 'C:/Users/sekis/PycharmProjects/PY/テスト用.text'
 f = open(harituke_f, 'r', encoding="utf-8-sig")
 b_data = f.readlines()
 f.close()
