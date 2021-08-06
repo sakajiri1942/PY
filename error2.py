@@ -1,2 +1,0 @@
-aaa = 'ABC'
-print(aaa)
