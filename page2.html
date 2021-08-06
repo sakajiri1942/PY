@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex,nofollow" />
+    <title>homePage</title>
+    <style>
+        ul {
+            margin: 0px 0 10px 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            display: block;
+
+        }
+
+        a {
+            cursor: pointer;
+        }
+
+        .wrapAccordion {
+            position: relative;
+            width: 200px;
+            height: 70px;
+        }
+
+        .accordion {
+            position: absolute;
+            overflow: hidden;
+            height: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .show {
+            animation: toggle 0.3s both;
+
+        }
+
+        .hide {
+            animation: toggle 0.3s both reverse;
+        }
+
+        button {
+            width: 20px;
+            height: 20px;
+            line-height: 0;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+        }
+
+        @keyframes toggle {
+            0% {
+                height: 0;
+            }
+
+            25% {
+                height: 25%;
+            }
+
+            50% {
+                height: 50%;
+            }
+
+            75% {
+                height: 75%;
+            }
+
+            100% {
+                height: 100%;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <ul>
+        <li>＊1 <a href="#article">見出し01</a></li>
+        <li>＊2 <a href="#article">見出し02</a></li>
+        <li>＊3 <a href="#article">見出し03</a></li>
+    </ul>
+    <strong id="alert">注意事項</strong>
+    <button type="button">+</button>
+    <div class="wrapAccordion">
+        <ul id="accordionJs" class="accordion">
+            <li>＊1　テキストが入ります</li>
+            <li>＊2　テキストが入ります</li>
+            <li>＊3　テキストが入ります</li>
+        </ul>
+    </div>
+    <script>
+        const accordion = document.getElementById("accordionJs");
+        const clickBtn = (btn) => {
+            btn.addEventListener("click", () => {
+                if (accordion.clientHeight == 0) {
+                    accordion.classList.remove("hide");
+                    accordion.style.height = "0";
+                    setTimeout(() => {
+                        accordion.classList.add("show");
+                    }, 200);
+                } else {
+                    accordion.classList.remove("show");
+                    accordion.style.height = "100%";
+                    setTimeout(() => {
+                        accordion.classList.add("hide");
+                    }, 200);
+                }
+            });
+        }
+
+        const button = document.getElementsByTagName("button")[0];
+        const a0 = document.getElementsByTagName("a")[0];
+        const a1 = document.getElementsByTagName("a")[1];
+        const a2 = document.getElementsByTagName("a")[2];
+        clickBtn(button);
+        clickBtn(a0);
+        clickBtn(a1);
+        clickBtn(a2);
+    </script>
+</body>
+</html>

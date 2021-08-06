@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./acod.css" type="text/css" />
+</head>
+
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(function(){
+  $('.contWrap').hide();
+  $(window).on('popstate',function(){
+    $('.contWrap').hide();
+    $(location.hash).next('.contWrap').show();
+  });
+});
+</script>
+<div class="inner">
+<div class="head01 head02">
+<div class="box">
+<div class="cont info-cont">
+<ul class="head-ul">
+<li class="head-text"><a href="#nya01">あああああ</a></li>
+<li class="head-text"><a href="#nya02">いいいいい</a></li>
+<li class="head-text"><a href="#nya03">ううううう</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+<input id="acd-check1" class="acd-check" type="checkbox">
+<label class="acd-label" for="acd-check1">クリックで開く1</label>
+<div class="acd-content">
+
+    <p>hello.world!</p>
+</div>
+<input id="acd-check2" class="acd-check" type="checkbox">
+<label class="acd-label" for="acd-check2">クリックで開く2</label>
+<div class="acd-content">
+    <p>hello.world2!</p>
+</div>
+<input id="acd-check3" class="acd-check" type="checkbox">
+<label class="acd-label" for="acd-check3">クリックで開く3</label>
+<div class="acd-content">
+    <p>hello.world3!</p>
+</div>
+<input id="acd-check4" class="acd-check" type="checkbox">
+<label class="acd-label" for="acd-check4">クリックで開く4</label>
+<div class="acd-content">
+    <p>hello.world4!</p>
+</div>
+
+
+<div id="nya01" class="cont-head">
+<h3 class="main-h3">あああああ</h3>
+</div>
+<div class="inner contWrap">
+内容
+<br><br><br><br><br><br>
+</div>
+
+</body>
+
+</html>
