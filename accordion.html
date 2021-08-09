@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+		<title>別ページから飛んできたとき指定の要素を開く | Elementor好きのWebデザイナー向けブログえれくり</title>
+
+		<!-- All in One SEO 4.1.2.2 -->
+		<link rel="canonical" href="https://elecre.net/accordion/" />
+		<meta name="google" content="nositelinkssearchbox" />
+		<script type="application/ld+json" class="aioseo-schema">
+			{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebSite","@id":"https:\/\/elecre.net\/#website","url":"https:\/\/elecre.net\/","name":"Elementor\u597d\u304d\u306eWeb\u30c7\u30b6\u30a4\u30ca\u30fc\u5411\u3051\u30d6\u30ed\u30b0\u3048\u308c\u304f\u308a","description":"WordPress Elementor\u3092\u4f7f\u3063\u3066\u30af\u30ea\u30a8\u30a4\u30c6\u30a3\u30d6\u306aWeb\u30c7\u30b6\u30a4\u30f3\u3092\u4f5c\u308d\u3046\uff01","publisher":{"@id":"https:\/\/elecre.net\/#organization"}},{"@type":"Organization","@id":"https:\/\/elecre.net\/#organization","name":"Elementor\u597d\u304d\u306eWeb\u30c7\u30b6\u30a4\u30ca\u30fc\u5411\u3051\u30d6\u30ed\u30b0\u3048\u308c\u304f\u308a","url":"https:\/\/elecre.net\/","logo":{"@type":"ImageObject","@id":"https:\/\/elecre.net\/#organizationLogo","url":"https:\/\/elecre.net\/wp-content\/uploads\/2018\/12\/cropped-icon2.png","width":"80","height":"70"},"image":{"@id":"https:\/\/elecre.net\/#organizationLogo"}},{"@type":"BreadcrumbList","@id":"https:\/\/elecre.net\/accordion\/#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/elecre.net\/#listItem","position":"1","item":{"@type":"WebPage","@id":"https:\/\/elecre.net\/","name":"\u30db\u30fc\u30e0","description":"WordPress\u306e\u30d7\u30e9\u30b0\u30a4\u30f3Elementor Page Builder for WordPress\u3002HTML\u3084CSS\u3001JavaScript\u3092\u610f\u8b58\u305b\u305aWeb\u30c7\u30b6\u30a4\u30f3\u304c\u53ef\u80fd\u3067\u3059\u3002Web\u30c7\u30b6\u30a4\u30ca\u30fc\u3067\u3042\u308b\u3048\u308c\u304f\u308a\u304cElementor\u306e\u4f7f\u3044\u65b9\u3084\u6d3b\u7528\u65b9\u6cd5\u3092\u4f1d\u3048\u3066\u884c\u304d\u307e\u3059\u3002\u307e\u305f\u5c11\u4eba\u6570\u3067\u306eElementor\u30bb\u30df\u30ca\u30fc\u3082\u884c\u3063\u3066\u304a\u308a\u307e\u3059\u3002","url":"https:\/\/elecre.net\/"},"nextItem":"https:\/\/elecre.net\/accordion\/#listItem"},{"@type":"ListItem","@id":"https:\/\/elecre.net\/accordion\/#listItem","position":"2","item":{"@type":"WebPage","@id":"https:\/\/elecre.net\/accordion\/","name":"\u5225\u30da\u30fc\u30b8\u304b\u3089\u98db\u3093\u3067\u304d\u305f\u3068\u304d\u6307\u5b9a\u306e\u8981\u7d20\u3092\u958b\u304f","url":"https:\/\/elecre.net\/accordion\/"},"previousItem":"https:\/\/elecre.net\/#listItem"}]},{"@type":"WebPage","@id":"https:\/\/elecre.net\/accordion\/#webpage","url":"https:\/\/elecre.net\/accordion\/","name":"\u5225\u30da\u30fc\u30b8\u304b\u3089\u98db\u3093\u3067\u304d\u305f\u3068\u304d\u6307\u5b9a\u306e\u8981\u7d20\u3092\u958b\u304f | Elementor\u597d\u304d\u306eWeb\u30c7\u30b6\u30a4\u30ca\u30fc\u5411\u3051\u30d6\u30ed\u30b0\u3048\u308c\u304f\u308a","inLanguage":"ja","isPartOf":{"@id":"https:\/\/elecre.net\/#website"},"breadcrumb":{"@id":"https:\/\/elecre.net\/accordion\/#breadcrumblist"},"datePublished":"2019-01-11T06:47:12+09:00","dateModified":"2019-01-11T07:11:20+09:00"}]}
+		</script>
+		<script type="text/javascript" >
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-112705797-1", 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src="https://www.google-analytics.com/analytics.js"></script>
+		<!-- All in One SEO -->
+
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Elementor好きのWebデザイナー向けブログえれくり &raquo; フィード" href="https://elecre.net/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Elementor好きのWebデザイナー向けブログえれくり &raquo; コメントフィード" href="https://elecre.net/comments/feed/" />
+		<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/elecre.net\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<!-- elecre.net is managing ads with Advanced Ads – https://wpadvancedads.com/ --><script>
+			advanced_ads_ready=function(){var e,t=[],n="object"==typeof document&&document,d=n&&n.documentElement.doScroll,o="DOMContentLoaded",a=n&&(d?/^loaded|^c/:/^loaded|^i|^c/).test(n.readyState);return!a&&n&&(e=function(){for(n.removeEventListener(o,e),window.removeEventListener("load",e),a=1;e=t.shift();)e()},n.addEventListener(o,e),window.addEventListener("load",e)),function(e){a?setTimeout(e,0):t.push(e)}}();		</script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='astra-theme-css-css'  href='https://elecre.net/wp-content/themes/astra/assets/css/minified/style.min.css' media='all' />
+<style id='astra-theme-css-inline-css'>
+html{font-size:112.5%;}a,.page-title{color:#b12f55;}a:hover,a:focus{color:#3a3a3a;}body,button,input,select,textarea,.ast-button,.ast-custom-button{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-weight:inherit;font-size:18px;font-size:1rem;line-height:1.75;}blockquote{color:#000000;}.site-title{font-size:26px;font-size:1.4444444444444rem;display:block;}header .custom-logo-link img{max-width:137px;}.astra-logo-svg{width:137px;}.ast-archive-description .ast-archive-title{font-size:40px;font-size:2.2222222222222rem;}.site-header .site-description{font-size:15px;font-size:0.83333333333333rem;display:block;}.entry-title{font-size:29px;font-size:1.6111111111111rem;}h1,.entry-content h1{font-size:40px;font-size:2.2222222222222rem;}h2,.entry-content h2{font-size:30px;font-size:1.6666666666667rem;}h3,.entry-content h3{font-size:25px;font-size:1.3888888888889rem;}h4,.entry-content h4{font-size:20px;font-size:1.1111111111111rem;}h5,.entry-content h5{font-size:18px;font-size:1rem;}h6,.entry-content h6{font-size:15px;font-size:0.83333333333333rem;}.ast-single-post .entry-title,.page-title{font-size:38px;font-size:2.1111111111111rem;}::selection{background-color:#0170B9;color:#ffffff;}body,h1,.entry-title a,.entry-content h1,h2,.entry-content h2,h3,.entry-content h3,h4,.entry-content h4,h5,.entry-content h5,h6,.entry-content h6{color:#3a3a3a;}.tagcloud a:hover,.tagcloud a:focus,.tagcloud a.current-item{color:#ffffff;border-color:#b12f55;background-color:#b12f55;}input:focus,input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="reset"]:focus,input[type="search"]:focus,textarea:focus{border-color:#b12f55;}input[type="radio"]:checked,input[type=reset],input[type="checkbox"]:checked,input[type="checkbox"]:hover:checked,input[type="checkbox"]:focus:checked,input[type=range]::-webkit-slider-thumb{border-color:#b12f55;background-color:#b12f55;box-shadow:none;}.site-footer a:hover + .post-count,.site-footer a:focus + .post-count{background:#b12f55;border-color:#b12f55;}.single .nav-links .nav-previous,.single .nav-links .nav-next{color:#b12f55;}.entry-meta,.entry-meta *{line-height:1.45;color:#b12f55;}.entry-meta a:hover,.entry-meta a:hover *,.entry-meta a:focus,.entry-meta a:focus *,.page-links > .page-link,.page-links .page-link:hover,.post-navigation a:hover{color:#3a3a3a;}.widget-title{font-size:25px;font-size:1.3888888888889rem;color:#3a3a3a;}#cat option,.secondary .calendar_wrap thead a,.secondary .calendar_wrap thead a:visited{color:#b12f55;}.secondary .calendar_wrap #today,.ast-progress-val span{background:#b12f55;}.secondary a:hover + .post-count,.secondary a:focus + .post-count{background:#b12f55;border-color:#b12f55;}.calendar_wrap #today > a{color:#ffffff;}.page-links .page-link,.single .post-navigation a{color:#b12f55;}#secondary,#secondary button,#secondary input,#secondary select,#secondary textarea{font-size:18px;font-size:1rem;}.main-header-menu .menu-link,.ast-header-custom-item a{color:#3a3a3a;}.main-header-menu .menu-item:hover > .menu-link,.main-header-menu .menu-item:hover > .ast-menu-toggle,.main-header-menu .ast-masthead-custom-menu-items a:hover,.main-header-menu .menu-item.focus > .menu-link,.main-header-menu .menu-item.focus > .ast-menu-toggle,.main-header-menu .current-menu-item > .menu-link,.main-header-menu .current-menu-ancestor > .menu-link,.main-header-menu .current-menu-item > .ast-menu-toggle,.main-header-menu .current-menu-ancestor > .ast-menu-toggle{color:#b12f55;}.header-main-layout-3 .ast-main-header-bar-alignment{margin-right:auto;}.header-main-layout-2 .site-header-section-left .ast-site-identity{text-align:left;}.ast-logo-title-inline .site-logo-img{padding-right:1em;}.site-logo-img img{ transition:all 0.2s linear;}.ast-header-break-point .ast-mobile-menu-buttons-minimal.menu-toggle{background:transparent;color:#0170B9;}.ast-header-break-point .ast-mobile-menu-buttons-outline.menu-toggle{background:transparent;border:1px solid #0170B9;color:#0170B9;}.ast-header-break-point .ast-mobile-menu-buttons-fill.menu-toggle{background:#0170B9;}#secondary {margin: 4em 0 2.5em;word-break: break-word;line-height: 2;}#secondary li {margin-bottom: 0.25em;}#secondary li:last-child {margin-bottom: 0;}@media (max-width: 768px) {.js_active .ast-plain-container.ast-single-post #secondary {margin-top: 1.5em;}}.ast-separate-container.ast-two-container #secondary .widget {background-color: #fff;padding: 2em;margin-bottom: 2em;}@media (min-width: 993px) {.ast-left-sidebar #secondary {padding-right: 60px;}.ast-right-sidebar #secondary {padding-left: 60px;}}@media (max-width: 993px) {.ast-right-sidebar #secondary {padding-left: 30px;}.ast-left-sidebar #secondary {padding-right: 30px;}}.footer-adv .footer-adv-overlay{border-top-style:solid;border-top-color:#7a7a7a;}.wp-block-buttons.aligncenter{justify-content:center;}@media (max-width:782px){.entry-content .wp-block-columns .wp-block-column{margin-left:0px;}}@media (max-width:768px){.ast-separate-container .ast-article-post,.ast-separate-container .ast-article-single{padding:1.5em 2.14em;}.ast-separate-container #primary,.ast-separate-container #secondary{padding:1.5em 0;}#primary,#secondary{padding:1.5em 0;margin:0;}.ast-left-sidebar #content > .ast-container{display:flex;flex-direction:column-reverse;width:100%;}.ast-author-box img.avatar{margin:20px 0 0 0;}}@media (max-width:768px){#secondary.secondary{padding-top:0;}.ast-separate-container.ast-right-sidebar #secondary{padding-left:1em;padding-right:1em;}.ast-separate-container.ast-two-container #secondary{padding-left:0;padding-right:0;}.ast-page-builder-template .entry-header #secondary,.ast-page-builder-template #secondary{margin-top:1.5em;}}@media (max-width:768px){.ast-right-sidebar #primary{padding-right:0;}.ast-page-builder-template.ast-left-sidebar #secondary,.ast-page-builder-template.ast-right-sidebar #secondary{padding-right:20px;padding-left:20px;}.ast-right-sidebar #secondary,.ast-left-sidebar #primary{padding-left:0;}.ast-left-sidebar #secondary{padding-right:0;}}@media (min-width:769px){.ast-separate-container.ast-right-sidebar #primary,.ast-separate-container.ast-left-sidebar #primary{border:0;}.search-no-results.ast-separate-container #primary{margin-bottom:4em;}}@media (min-width:769px){.ast-right-sidebar #primary{border-right:1px solid #eee;}.ast-left-sidebar #primary{border-left:1px solid #eee;}.ast-right-sidebar #secondary{border-left:1px solid #eee;margin-left:-1px;}.ast-left-sidebar #secondary{border-right:1px solid #eee;margin-right:-1px;}.ast-separate-container.ast-two-container.ast-right-sidebar #secondary{padding-left:30px;padding-right:0;}.ast-separate-container.ast-two-container.ast-left-sidebar #secondary{padding-right:30px;padding-left:0;}.ast-separate-container.ast-right-sidebar #secondary,.ast-separate-container.ast-left-sidebar #secondary{border:0;margin-left:auto;margin-right:auto;}.ast-separate-container.ast-two-container #secondary .widget:last-child{margin-bottom:0;}}.menu-toggle,button,.ast-button,.ast-custom-button,.button,input#submit,input[type="button"],input[type="submit"],input[type="reset"]{color:#ffffff;border-color:#0170B9;background-color:#0170B9;border-radius:2px;padding-top:10px;padding-right:40px;padding-bottom:10px;padding-left:40px;font-family:inherit;font-weight:inherit;}button:focus,.menu-toggle:hover,button:hover,.ast-button:hover,.ast-custom-button:hover .button:hover,.ast-custom-button:hover,input[type=reset]:hover,input[type=reset]:focus,input#submit:hover,input#submit:focus,input[type="button"]:hover,input[type="button"]:focus,input[type="submit"]:hover,input[type="submit"]:focus{color:#ffffff;background-color:#3a3a3a;border-color:#3a3a3a;}@media (min-width:544px){.ast-container{max-width:100%;}}@media (max-width:544px){.ast-separate-container .ast-article-post,.ast-separate-container .ast-article-single,.ast-separate-container .comments-title,.ast-separate-container .ast-archive-description{padding:1.5em 1em;}.ast-separate-container #content .ast-container{padding-left:0.54em;padding-right:0.54em;}.ast-separate-container .ast-comment-list li.depth-1{padding:1.5em 1em;margin-bottom:1.5em;}.ast-separate-container .ast-comment-list .bypostauthor{padding:.5em;}.ast-search-menu-icon.ast-dropdown-active .search-field{width:170px;}.ast-separate-container #secondary{padding-top:0;}.ast-separate-container.ast-two-container #secondary .widget{margin-bottom:1.5em;padding-left:1em;padding-right:1em;}.site-branding img,.site-header .site-logo-img .custom-logo-link img{max-width:100%;}}@media (max-width:768px){.ast-mobile-header-stack .main-header-bar .ast-search-menu-icon{display:inline-block;}.ast-header-break-point.ast-header-custom-item-outside .ast-mobile-header-stack .main-header-bar .ast-search-icon{margin:0;}.ast-comment-avatar-wrap img{max-width:2.5em;}.ast-separate-container .ast-comment-list li.depth-1{padding:1.5em 2.14em;}.ast-separate-container .comment-respond{padding:2em 2.14em;}.ast-comment-meta{padding:0 1.8888em 1.3333em;}}body,.ast-separate-container{background-color:#ffffff;;}@media (max-width:768px){.site-title{display:block;}.ast-archive-description .ast-archive-title{font-size:40px;}.site-header .site-description{display:block;}.entry-title{font-size:30px;}h1,.entry-content h1{font-size:30px;}h2,.entry-content h2{font-size:25px;}h3,.entry-content h3{font-size:20px;}.ast-single-post .entry-title,.page-title{font-size:30px;}}@media (max-width:544px){.site-title{display:block;}.ast-archive-description .ast-archive-title{font-size:40px;}.site-header .site-description{display:block;}.entry-title{font-size:30px;}h1,.entry-content h1{font-size:30px;}h2,.entry-content h2{font-size:25px;}h3,.entry-content h3{font-size:20px;}.ast-single-post .entry-title,.page-title{font-size:30px;}}@media (max-width:768px){html{font-size:102.6%;}}@media (max-width:544px){html{font-size:102.6%;}}@media (min-width:769px){.ast-container{max-width:1240px;}}@font-face {font-family: "Astra";src: url(https://elecre.net/wp-content/themes/astra/assets/fonts/astra.woff) format("woff"),url(https://elecre.net/wp-content/themes/astra/assets/fonts/astra.ttf) format("truetype"),url(https://elecre.net/wp-content/themes/astra/assets/fonts/astra.svg#astra) format("svg");font-weight: normal;font-style: normal;font-display: fallback;}@media (max-width:921px) {.main-header-bar .main-header-bar-navigation{display:none;}}.ast-desktop .main-header-menu.submenu-with-border .sub-menu,.ast-desktop .main-header-menu.submenu-with-border .astra-full-megamenu-wrapper{border-color:#0170B9;}.ast-desktop .main-header-menu.submenu-with-border .sub-menu{border-top-width:2px;border-right-width:0px;border-left-width:0px;border-bottom-width:0px;border-style:solid;}.ast-desktop .main-header-menu.submenu-with-border .sub-menu .sub-menu{top:-2px;}.ast-desktop .main-header-menu.submenu-with-border .sub-menu .menu-link,.ast-desktop .main-header-menu.submenu-with-border .children .menu-link{border-bottom-width:0px;border-style:solid;border-color:#eaeaea;}@media (min-width:769px){.main-header-menu .sub-menu .menu-item.ast-left-align-sub-menu:hover > .sub-menu,.main-header-menu .sub-menu .menu-item.ast-left-align-sub-menu.focus > .sub-menu{margin-left:-0px;}}.ast-small-footer{border-top-style:solid;border-top-width:1px;border-top-color:#7a7a7a;}.ast-small-footer-wrap{text-align:center;}.ast-header-break-point.ast-header-custom-item-inside .main-header-bar .main-header-bar-navigation .ast-search-icon {display: none;}.ast-header-break-point.ast-header-custom-item-inside .main-header-bar .ast-search-menu-icon .search-form {padding: 0;display: block;overflow: hidden;}.ast-header-break-point .ast-header-custom-item .widget:last-child {margin-bottom: 1em;}.ast-header-custom-item .widget {margin: 0.5em;display: inline-block;vertical-align: middle;}.ast-header-custom-item .widget p {margin-bottom: 0;}.ast-header-custom-item .widget li {width: auto;}.ast-header-custom-item-inside .button-custom-menu-item .menu-link {display: none;}.ast-header-custom-item-inside.ast-header-break-point .button-custom-menu-item .ast-custom-button-link {display: none;}.ast-header-custom-item-inside.ast-header-break-point .button-custom-menu-item .menu-link {display: block;}.ast-header-break-point.ast-header-custom-item-outside .main-header-bar .ast-search-icon {margin-right: 1em;}.ast-header-break-point.ast-header-custom-item-inside .main-header-bar .ast-search-menu-icon .search-field,.ast-header-break-point.ast-header-custom-item-inside .main-header-bar .ast-search-menu-icon.ast-inline-search .search-field {width: 100%;padding-right: 5.5em;}.ast-header-break-point.ast-header-custom-item-inside .main-header-bar .ast-search-menu-icon .search-submit {display: block;position: absolute;height: 100%;top: 0;right: 0;padding: 0 1em;border-radius: 0;}.ast-header-break-point .ast-header-custom-item .ast-masthead-custom-menu-items {padding-left: 20px;padding-right: 20px;margin-bottom: 1em;margin-top: 1em;}.ast-header-custom-item-inside.ast-header-break-point .button-custom-menu-item {padding-left: 0;padding-right: 0;margin-top: 0;margin-bottom: 0;}.astra-icon-down_arrow::after {content: "\e900";font-family: Astra;}.astra-icon-close::after {content: "\e5cd";font-family: Astra;}.astra-icon-drag_handle::after {content: "\e25d";font-family: Astra;}.astra-icon-format_align_justify::after {content: "\e235";font-family: Astra;}.astra-icon-menu::after {content: "\e5d2";font-family: Astra;}.astra-icon-reorder::after {content: "\e8fe";font-family: Astra;}.astra-icon-search::after {content: "\e8b6";font-family: Astra;}.astra-icon-zoom_in::after {content: "\e56b";font-family: Astra;}.astra-icon-check-circle::after {content: "\e901";font-family: Astra;}.astra-icon-shopping-cart::after {content: "\f07a";font-family: Astra;}.astra-icon-shopping-bag::after {content: "\f290";font-family: Astra;}.astra-icon-shopping-basket::after {content: "\f291";font-family: Astra;}.astra-icon-circle-o::after {content: "\e903";font-family: Astra;}.astra-icon-certificate::after {content: "\e902";font-family: Astra;}.ast-breadcrumbs .trail-browse,.ast-breadcrumbs .trail-items,.ast-breadcrumbs .trail-items li{display:inline-block;margin:0;padding:0;border:none;background:inherit;text-indent:0;}.ast-breadcrumbs .trail-browse{font-size:inherit;font-style:inherit;font-weight:inherit;color:inherit;}.ast-breadcrumbs .trail-items{list-style:none;}.trail-items li::after{padding:0 0.3em;content:"\00bb";}.trail-items li:last-of-type::after{display:none;}.elementor-widget-heading .elementor-heading-title{margin:0;}.elementor-post.elementor-grid-item.hentry{margin-bottom:0;}.woocommerce div.product .elementor-element.elementor-products-grid .related.products ul.products li.product,.elementor-element .elementor-wc-products .woocommerce[class*='columns-'] ul.products li.product{width:auto;margin:0;float:none;}.ast-left-sidebar .elementor-section.elementor-section-stretched,.ast-right-sidebar .elementor-section.elementor-section-stretched{max-width:100%;left:0 !important;}.elementor-template-full-width .ast-container{display:block;}@media (max-width:544px){.elementor-element .elementor-wc-products .woocommerce[class*="columns-"] ul.products li.product{width:auto;margin:0;}.elementor-element .woocommerce .woocommerce-result-count{float:none;}}.ast-header-break-point .main-header-bar{border-bottom-width:1px;}@media (min-width:769px){.main-header-bar{border-bottom-width:1px;}}@media (min-width:769px){#primary{width:70%;}#secondary{width:30%;}}.ast-safari-browser-less-than-11 .main-header-menu .menu-item, .ast-safari-browser-less-than-11 .main-header-bar .ast-masthead-custom-menu-items{display:block;}.main-header-menu .menu-item, #astra-footer-menu .menu-item, .main-header-bar .ast-masthead-custom-menu-items{-js-display:flex;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column;}.main-header-menu > .menu-item > .menu-link, #astra-footer-menu > .menu-item > .menu-link,{height:100%;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;-js-display:flex;display:flex;}.ast-primary-menu-disabled .main-header-bar .ast-masthead-custom-menu-items{flex:unset;}.header-main-layout-1 .ast-flex.main-header-container, .header-main-layout-3 .ast-flex.main-header-container{-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;}.main-header-menu .sub-menu .menu-item.menu-item-has-children > .menu-link:after{position:absolute;right:1em;top:50%;transform:translate(0,-50%) rotate(270deg);}.ast-header-break-point .main-header-bar .main-header-bar-navigation .page_item_has_children > .ast-menu-toggle::before, .ast-header-break-point .main-header-bar .main-header-bar-navigation .menu-item-has-children > .ast-menu-toggle::before, .ast-mobile-popup-drawer .main-header-bar-navigation .menu-item-has-children>.ast-menu-toggle::before, .ast-header-break-point .ast-mobile-header-wrap .main-header-bar-navigation .menu-item-has-children > .ast-menu-toggle::before{font-weight:bold;content:"\e900";font-family:Astra;text-decoration:inherit;display:inline-block;}.ast-header-break-point .main-navigation ul.sub-menu .menu-item .menu-link:before{content:"\e900";font-family:Astra;font-size:.65em;text-decoration:inherit;display:inline-block;transform:translate(0, -2px) rotateZ(270deg);margin-right:5px;}.widget_search .search-form:after{font-family:Astra;font-size:1.2em;font-weight:normal;content:"\e8b6";position:absolute;top:50%;right:15px;transform:translate(0, -50%);}.astra-search-icon::before{content:"\e8b6";font-family:Astra;font-style:normal;font-weight:normal;text-decoration:inherit;text-align:center;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}.main-header-bar .main-header-bar-navigation .page_item_has_children > a:after, .main-header-bar .main-header-bar-navigation .menu-item-has-children > a:after, .site-header-focus-item .main-header-bar-navigation .menu-item-has-children > .menu-link:after{content:"\e900";display:inline-block;font-family:Astra;font-size:.6rem;font-weight:bold;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin-left:10px;line-height:normal;}.ast-mobile-popup-drawer .main-header-bar-navigation .ast-submenu-expanded>.ast-menu-toggle::before{transform:rotateX(180deg);}.ast-header-break-point .main-header-bar-navigation .menu-item-has-children > .menu-link:after{display:none;}
+</style>
+<link rel='stylesheet' id='wp-block-library-css'  href='https://elecre.net/wp-includes/css/dist/block-library/style.min.css' media='all' />
+<link rel='stylesheet' id='crp-public-css'  href='https://elecre.net/wp-content/plugins/custom-related-posts/dist/public.css' media='all' />
+<link rel='stylesheet' id='related-posts-by-taxonomy-css'  href='https://elecre.net/wp-content/plugins/related-posts-by-taxonomy/includes/assets/css/styles.css' media='all' />
+<link rel='stylesheet' id='metform-ui-css'  href='https://elecre.net/wp-content/plugins/metform/public/assets/css/metform-ui.css' media='all' />
+<link rel='stylesheet' id='metform-style-css'  href='https://elecre.net/wp-content/plugins/metform/public/assets/css/style.css' media='all' />
+<link rel='stylesheet' id='parent-style-css'  href='https://elecre.net/wp-content/themes/astra/style.css' media='all' />
+<link rel='stylesheet' id='child-style-css'  href='https://elecre.net/wp-content/themes/astra-child/style.css' media='all' />
+<link rel='stylesheet' id='elementor-icons-css'  href='https://elecre.net/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-legacy-css'  href='https://elecre.net/wp-content/plugins/elementor/assets/css/frontend-legacy.min.css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css'  href='https://elecre.net/wp-content/plugins/elementor/assets/css/frontend.min.css' media='all' />
+<style id='elementor-frontend-inline-css'>
+@font-face{font-family:eicons;src:url(https://elecre.net/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0);src:url(https://elecre.net/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"),url(https://elecre.net/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"),url(https://elecre.net/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"),url(https://elecre.net/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"),url(https://elecre.net/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");font-weight:400;font-style:normal}
+</style>
+<link rel='stylesheet' id='elementor-post-4791-css'  href='https://elecre.net/wp-content/uploads/elementor/css/post-4791.css' media='all' />
+<link rel='stylesheet' id='elementor-pro-css'  href='https://elecre.net/wp-content/plugins/elementor-pro/assets/css/frontend.min.css' media='all' />
+<link rel='stylesheet' id='metform-css-formpicker-control-editor-css'  href='https://elecre.net/wp-content/plugins/metform/controls/assets/css/form-picker-editor.css' media='all' />
+<link rel='stylesheet' id='font-awesome-5-all-css'  href='https://elecre.net/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css' media='all' />
+<link rel='stylesheet' id='font-awesome-4-shim-css'  href='https://elecre.net/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css' media='all' />
+<link rel='stylesheet' id='elementor-post-3032-css'  href='https://elecre.net/wp-content/uploads/elementor/css/post-3032.css' media='all' />
+<link rel='stylesheet' id='elementor-post-3604-css'  href='https://elecre.net/wp-content/uploads/elementor/css/post-3604.css' media='all' />
+<link rel='stylesheet' id='elementor-post-3174-css'  href='https://elecre.net/wp-content/uploads/elementor/css/post-3174.css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css'  href='https://elecre.net/wp-content/plugins/tablepress/css/default.min.css' media='all' />
+<link rel='stylesheet' id='google-fonts-1-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto' media='all' />
+<link rel='stylesheet' id='elementor-icons-shared-0-css'  href='https://elecre.net/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-solid-css'  href='https://elecre.net/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css' media='all' />
+<script src='https://elecre.net/wp-includes/js/jquery/jquery.min.js' id='jquery-core-js'></script>
+<script src='https://elecre.net/wp-includes/js/jquery/jquery-migrate.min.js' id='jquery-migrate-js'></script>
+<!--[if IE]>
+<script src='https://elecre.net/wp-content/themes/astra/assets/js/minified/flexibility.min.js' id='astra-flexibility-js'></script>
+<script id='astra-flexibility-js-after'>
+flexibility(document.documentElement);
+</script>
+<![endif]-->
+<script src='https://elecre.net/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js' id='font-awesome-4-shim-js'></script>
+<script src='https://elecre.net/wp-content/plugins/granular-controls-for-elementor/assets/js/jarallax.js' id='granule-parallax-js-js'></script>
+<!-- start Simple Custom CSS and JS -->
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'sba4mye',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);</script>
+<!-- end Simple Custom CSS and JS -->
+<script data-ad-client="ca-pub-7434678264652118" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><link rel="icon" href="https://elecre.net/wp-content/uploads/2018/01/cropped-icon-2-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://elecre.net/wp-content/uploads/2018/01/cropped-icon-2-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://elecre.net/wp-content/uploads/2018/01/cropped-icon-2-180x180.png" />
+<meta name="msapplication-TileImage" content="https://elecre.net/wp-content/uploads/2018/01/cropped-icon-2-270x270.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" /></head>
+<body class="page-template page-template-elementor_canvas page page-id-3032 wp-custom-logo ast-desktop ast-plain-container ast-right-sidebar astra-3.6.7 ast-header-custom-item-inside ast-single-post ast-inherit-site-logo-transparent ast-normal-title-enabled elementor-default elementor-template-canvas elementor-kit-4791 elementor-page elementor-page-3032 aa-prefix-elecr-">
+			<div data-elementor-type="wp-post" data-elementor-id="3032" class="elementor elementor-3032 elementor-bc-flex-widget" data-elementor-settings="[]">
+						<div class="elementor-inner">
+							<div class="elementor-section-wrap">
+							<section class="elementor-section elementor-top-section elementor-element elementor-element-0952487 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="0952487" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-db0f643" data-id="db0f643" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-4020896 elementor-widget elementor-widget-accordion" data-id="4020896" data-element_type="widget" data-widget_type="accordion.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-accordion" role="tablist">
+							<div class="elementor-accordion-item">
+					<div id="elementor-tab-title-6721" class="elementor-tab-title" data-tab="1" role="tab" aria-controls="elementor-tab-content-6721" aria-expanded="false">
+													<span class="elementor-accordion-icon elementor-accordion-icon-left" aria-hidden="true">
+															<span class="elementor-accordion-icon-closed"><i class="fas fa-plus"></i></span>
+								<span class="elementor-accordion-icon-opened"><i class="fas fa-minus"></i></span>
+														</span>
+												<a class="elementor-accordion-title" href="">アコーディオン 1番目</a>
+					</div>
+					<div id="elementor-tab-content-6721" class="elementor-tab-content elementor-clearfix" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-6721"><p>このテキストを変更するには編集ボタンをクリックしてください。Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p></div>
+				</div>
+							<div class="elementor-accordion-item">
+					<div id="elementor-tab-title-6722" class="elementor-tab-title" data-tab="2" role="tab" aria-controls="elementor-tab-content-6722" aria-expanded="false">
+													<span class="elementor-accordion-icon elementor-accordion-icon-left" aria-hidden="true">
+															<span class="elementor-accordion-icon-closed"><i class="fas fa-plus"></i></span>
+								<span class="elementor-accordion-icon-opened"><i class="fas fa-minus"></i></span>
+														</span>
+												<a class="elementor-accordion-title" href="">アコーディオン 2番目</a>
+					</div>
+					<div id="elementor-tab-content-6722" class="elementor-tab-content elementor-clearfix" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-6722"><p>このテキストを変更するには編集ボタンをクリックしてください。Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p></div>
+				</div>
+							<div class="elementor-accordion-item">
+					<div id="elementor-tab-title-6723" class="elementor-tab-title" data-tab="3" role="tab" aria-controls="elementor-tab-content-6723" aria-expanded="false">
+													<span class="elementor-accordion-icon elementor-accordion-icon-left" aria-hidden="true">
+															<span class="elementor-accordion-icon-closed"><i class="fas fa-plus"></i></span>
+								<span class="elementor-accordion-icon-opened"><i class="fas fa-minus"></i></span>
+														</span>
+												<a class="elementor-accordion-title" href="">アコーディオン 3番目</a>
+					</div>
+					<div id="elementor-tab-content-6723" class="elementor-tab-content elementor-clearfix" data-tab="3" role="tabpanel" aria-labelledby="elementor-tab-title-6723"><p>このテキストを変更するには編集ボタンをクリックしてください。Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p></div>
+				</div>
+								</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-b53a380 elementor-widget elementor-widget-html" data-id="b53a380" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<script>
+//アコーディオンの場合
+	jQuery(function(){
+
+	var hash = location.hash;
+	var tab=jQuery('.elementor-accordion-item');
+
+	if(hash.length){
+
+	//ハッシュがあったら
+	if(hash.match(/#num/)){
+
+	//番号
+	var tabName = Number(hash.slice(4.1)-1);
+
+	//遅延
+	jQuery('.elementor-accordion').delay(100).queue(function() {
+
+    //上部タブ部分
+    tab.children('.elementor-tab-title').removeClass('elementor-active');
+    tab.children('.elementor-tab-content').removeClass('elementor-active');
+    tab.children('.elementor-tab-content').css('display','none');
+
+    tab.eq(tabName).children('.elementor-tab-title').addClass('elementor-active');
+     tab.eq(tabName).children('.elementor-tab-content').addClass('elementor-active');
+    tab.eq(tabName).children('.elementor-tab-content').css('display','block');
+
+
+
+
+	});//queue
+
+	}//if hash
+
+	}//hash.length
+
+	});
+
+</script>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+						</div>
+					</div>
+				<div data-elementor-type="popup" data-elementor-id="3604" class="elementor elementor-3604 elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;fadeIn&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.1999999999999999555910790149937383830547332763671875,&quot;sizes&quot;:[]},&quot;triggers&quot;:[],&quot;timing&quot;:[]}">
+		<div class="elementor-section-wrap">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-5d703b02 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5d703b02" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6c7d31cb" data-id="6c7d31cb" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-22cc6e69 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="22cc6e69" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-ed1b0cd" data-id="ed1b0cd" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-5e4fd52b elementor-widget elementor-widget-heading" data-id="5e4fd52b" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Announce</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-1a899646 elementor-section-height-min-height elementor-section-items-stretch elementor-section-content-middle elementor-section-boxed elementor-section-height-default" data-id="1a899646" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-547dca76" data-id="547dca76" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-768fb52e elementor-widget elementor-widget-heading" data-id="768fb52e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">New<br>arrival</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-3879be5f elementor-widget elementor-widget-heading" data-id="3879be5f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">2019 collection</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-e29d3d4" data-id="e29d3d4" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-2a1d8950 elementor-widget elementor-widget-text-editor" data-id="2a1d8950" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+					Let’s face it, no look is really complete without the right finishes. Not to the best of standards, anyway (just tellin’ it like it is, babe). Upgrading your shoe game. Platforms, stilettos, wedges, mules, boots—stretch those legs next time you head out, then rock sliders, sneakers, and flats when it’s time to chill. 					</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-774ea252 elementor-align-justify elementor-widget elementor-widget-button" data-id="774ea252" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="#" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">shop new arrivals</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				</div>
+		</div>
+				<div data-elementor-type="popup" data-elementor-id="3174" class="elementor elementor-3174 elementor-bc-flex-widget elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;fadeIn&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.1999999999999999555910790149937383830547332763671875,&quot;sizes&quot;:[]},&quot;triggers&quot;:[],&quot;timing&quot;:[]}">
+		<div class="elementor-section-wrap">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-14821238 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="14821238" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-22f6892e" data-id="22f6892e" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-4503ac6d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4503ac6d" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-597e29cc" data-id="597e29cc" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-627b214 elementor-widget elementor-widget-heading" data-id="627b214" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Announce</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-4f928109 elementor-section-height-min-height elementor-section-items-stretch elementor-section-content-middle elementor-section-boxed elementor-section-height-default" data-id="4f928109" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-340245d1" data-id="340245d1" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-5343c4ef elementor-widget elementor-widget-heading" data-id="5343c4ef" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">New<br>arrival</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-5351dfea elementor-widget elementor-widget-heading" data-id="5351dfea" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">2019 collection</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-6c0fe748" data-id="6c0fe748" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-76b5a042 elementor-widget elementor-widget-text-editor" data-id="76b5a042" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+					Let’s face it, no look is really complete without the right finishes. Not to the best of standards, anyway (just tellin’ it like it is, babe). Upgrading your shoe game. Platforms, stilettos, wedges, mules, boots—stretch those legs next time you head out, then rock sliders, sneakers, and flats when it’s time to chill. 					</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-6440504f elementor-align-justify elementor-widget elementor-widget-button" data-id="6440504f" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="#" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">shop new arrivals</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				</div>
+		</div>
+		<link rel='stylesheet' id='e-animations-css'  href='https://elecre.net/wp-content/plugins/elementor/assets/lib/animations/animations.min.css' media='all' />
+<script id='astra-theme-js-js-extra'>
+var astra = {"break_point":"921","isRtl":""};
+</script>
+<script src='https://elecre.net/wp-content/themes/astra/assets/js/minified/style.min.js' id='astra-theme-js-js'></script>
+<script src='https://elecre.net/wp-content/plugins/metform/public/assets/js/htm.js' id='htm-js'></script>
+<script src='https://elecre.net/wp-includes/js/dist/vendor/lodash.min.js' id='lodash-js'></script>
+<script id='lodash-js-after'>
+window.lodash = _.noConflict();
+</script>
+<script src='https://elecre.net/wp-includes/js/dist/vendor/wp-polyfill.min.js' id='wp-polyfill-js'></script>
+<script id='wp-polyfill-js-after'>
+( 'fetch' in window ) || document.write( '<script src="https://elecre.net/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://elecre.net/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="https://elecre.net/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="https://elecre.net/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://elecre.net/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://elecre.net/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>' );( 'objectFit' in document.documentElement.style ) || document.write( '<script src="https://elecre.net/wp-includes/js/dist/vendor/wp-polyfill-object-fit.min.js?ver=2.3.4"></scr' + 'ipt>' );
+</script>
+<script src='https://elecre.net/wp-includes/js/dist/vendor/react.min.js' id='react-js'></script>
+<script src='https://elecre.net/wp-includes/js/dist/vendor/react-dom.min.js' id='react-dom-js'></script>
+<script src='https://elecre.net/wp-includes/js/dist/escape-html.min.js' id='wp-escape-html-js'></script>
+<script src='https://elecre.net/wp-includes/js/dist/element.min.js' id='wp-element-js'></script>
+<script id='metform-app-js-extra'>
+var mf = {"postType":"page","restURI":"https:\/\/elecre.net\/wp-json\/metform\/v1\/forms\/views\/"};
+</script>
+<script src='https://elecre.net/wp-content/plugins/metform/public/assets/js/app.js' id='metform-app-js'></script>
+<script src='https://elecre.net/wp-content/plugins/page-links-to/dist/new-tab.js' id='page-links-to-js'></script>
+<script src='https://elecre.net/wp-includes/js/wp-embed.min.js' id='wp-embed-js'></script>
+<script src='https://elecre.net/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js' id='elementor-pro-webpack-runtime-js'></script>
+<script src='https://elecre.net/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js' id='elementor-webpack-runtime-js'></script>
+<script src='https://elecre.net/wp-content/plugins/elementor/assets/js/frontend-modules.min.js' id='elementor-frontend-modules-js'></script>
+<script id='elementor-pro-frontend-js-before'>
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/elecre.net\/wp-admin\/admin-ajax.php","nonce":"ad28de0a35","urls":{"assets":"https:\/\/elecre.net\/wp-content\/plugins\/elementor-pro\/assets\/"},"i18n":{"toc_no_headings_found":"No headings were found on this page."},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"ja","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/elecre.net\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script src='https://elecre.net/wp-content/plugins/elementor-pro/assets/js/frontend.min.js' id='elementor-pro-frontend-js'></script>
+<script src='https://elecre.net/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js' id='elementor-waypoints-js'></script>
+<script src='https://elecre.net/wp-includes/js/jquery/ui/core.min.js' id='jquery-ui-core-js'></script>
+<script src='https://elecre.net/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js' id='swiper-js'></script>
+<script src='https://elecre.net/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js' id='share-link-js'></script>
+<script src='https://elecre.net/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js' id='elementor-dialog-js'></script>
+<script id='elementor-frontend-js-before'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Facebook \u3067\u5171\u6709","shareOnTwitter":"Twitter \u3067\u5171\u6709","pinIt":"\u30d4\u30f3\u3059\u308b","download":"\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9","downloadImage":"\u753b\u50cf\u3092\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9","fullscreen":"\u30d5\u30eb\u30b9\u30af\u30ea\u30fc\u30f3","zoom":"\u30ba\u30fc\u30e0","share":"\u30b7\u30a7\u30a2","playVideo":"\u52d5\u753b\u518d\u751f","previous":"\u524d","next":"\u6b21","close":"\u9589\u3058\u308b"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"\u30e2\u30d0\u30a4\u30eb","value":767,"direction":"max","is_enabled":true,"default_value":767},"mobile_extra":{"label":"Mobile Extra","value":880,"direction":"max","is_enabled":false,"default_value":880},"tablet":{"label":"\u30bf\u30d6\u30ec\u30c3\u30c8","value":1024,"direction":"max","is_enabled":true,"default_value":1024},"tablet_extra":{"label":"Tablet Extra","value":1365,"direction":"max","is_enabled":false,"default_value":1365},"laptop":{"label":"\u30ce\u30fc\u30c8\u30d6\u30c3\u30af","value":1620,"direction":"max","is_enabled":false,"default_value":1620},"widescreen":{"label":"\u30ef\u30a4\u30c9\u30b9\u30af\u30ea\u30fc\u30f3","value":2400,"direction":"min","is_enabled":false,"default_value":2400}}},"version":"3.3.1","is_static":false,"experimentalFeatures":{"e_import_export":true,"landing-pages":true,"elements-color-picker":true,"admin-top-bar":true,"form-submissions":true,"video-playlist":true},"urls":{"assets":"https:\/\/elecre.net\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","active_breakpoints":["viewport_mobile","viewport_tablet"],"lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":3032,"title":"%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%8B%E3%82%89%E9%A3%9B%E3%82%93%E3%81%A7%E3%81%8D%E3%81%9F%E3%81%A8%E3%81%8D%E6%8C%87%E5%AE%9A%E3%81%AE%E8%A6%81%E7%B4%A0%E3%82%92%E9%96%8B%E3%81%8F%20%7C%20Elementor%E5%A5%BD%E3%81%8D%E3%81%AEWeb%E3%83%87%E3%82%B6%E3%82%A4%E3%83%8A%E3%83%BC%E5%90%91%E3%81%91%E3%83%96%E3%83%AD%E3%82%B0%E3%81%88%E3%82%8C%E3%81%8F%E3%82%8A","excerpt":"","featuredImage":false}};
+</script>
+<script src='https://elecre.net/wp-content/plugins/elementor/assets/js/frontend.min.js' id='elementor-frontend-js'></script>
+<script src='https://elecre.net/wp-content/plugins/elementor-pro/assets/js/preloaded-elements-handlers.min.js' id='pro-preloaded-elements-handlers-js'></script>
+<script src='https://elecre.net/wp-content/plugins/elementor/assets/js/preloaded-modules.min.js' id='preloaded-modules-js'></script>
+<script src='https://elecre.net/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js' id='e-sticky-js'></script>
+<script src='https://elecre.net/wp-content/plugins/metform/controls/assets/js/form-picker-editor.js' id='metform-js-formpicker-control-editor-js'></script>
+			<script>
+			/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+			</script>
+				</body>
+</html>

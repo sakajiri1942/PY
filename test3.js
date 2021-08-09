@@ -1,7 +1,11 @@
 $(document).ready(function(){
-$(".acd-check3").hide();
+$(".bbb").hide();
+var urlHash = location.hash;
+if(urlHash){
+    $(".bbb").show();
+}
 $(".title").click(function(){
 $(this).toggleClass("active").next().slideToggle("slow");
-$(location.hash).find(".title").click();
 });
 });
+
