@@ -3,7 +3,6 @@ from sklearn.model_selection import train_test_split
 
 mozi = datasets.load_digits()
 
-
 X = mozi.data
 y = mozi.target
 
