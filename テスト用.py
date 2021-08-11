@@ -1,8 +1,4 @@
-from urllib import request
-
-response = request.urlopen('https://www.pasonatech.co.jp/')
-content = response.readlines()
-response.close()
-
-
-print(content)
+aaa = 'こんにちは'
+bbb = 'こん'
+if bbb in aaa:
+    print('bbbはaaaに含まれます')
