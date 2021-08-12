@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/*========= 上部固定させるためのCSS ===============*/
+#header{
+  height: 100px;/*高さ指定*/
+  width:100%;/*横幅指定*/
+  /*以下はレイアウトのためのCSS*/
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 10px;
+  align-items: center;
+  background:#333;
+  color:#fff;
+}
+
+/*JSを使いfixedクラスが付与された際の設定*/
+#header2.fixed{
+  position: fixed;/*fixedを設定して固定*/
+    z-index: 999;/*最前面へ*/
+    top:0;/*位置指定*/
+    left:0;/*位置指定*/
+}
+
+
+nav ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li a{
+  display: block;
+  text-decoration: none;
+  color: #999;
+  padding:10px;
+  transition:all 0.5s;
+}
+
+nav ul li.current a,
+nav ul li a:hover{
+  color:#fff; 
+}
