@@ -1,0 +1,195 @@
+ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 750px;
+	margin: 0 auto;
+	padding: 50px 25px;
+}
+li{
+	width: 48%;
+	margin: 0 0 100px;
+}
+img{
+	width: 100%;
+	height: auto;
+}
+/*アニメーション要素のスタイル*/
+.animation{
+	opacity : 0;
+	visibility: hidden;
+	transition: 4s;
+	transform: translateY(30px);
+}
+/*アニメーション要素までスクロールした時のスタイル*/
+.active{
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+
+
+
+.content_desi
+ {
+    display: flex;
+    flex-wrap: wrap;
+	color: #999;
+	text-align: center;
+}
+
+.desi_box1 {
+    background: #eee;
+	width: 40%;
+position: relative;
+
+ padding: 1em;
+ min-width: 300px;
+
+}
+.desi_box2 {
+    background: #fff;
+	width: 40%;
+position: relative;
+ min-width: 300px;
+ padding: 1em;
+  background-image:url("./ma.jpg");
+    background-repeat: no-repeat;
+}
+
+
+.fadeIn {
+animation-name: fadeInAnime;
+animation-duration:3s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
+
+
+.toptitle{
+    padding: 100px;
+    font-size: 60px;
+    color: #FFF;
+    background-image:url("./ma.jpg");
+    width: 80%;
+    height:400px;
+}
+
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+}
+
+.wrapper::before {
+   content: '';
+   display: block;
+   width: 100%;
+   height: 100%;
+   background-image: url(ma.jpg);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   -webkit-animation: zoom 10s 1;
+   animation: zoom 10s 1;
+   animation-fill-mode: forwards;
+}
+
+@keyframes zoom {
+   0% {
+      transform: scale(1);
+   }
+   100% {
+      transform: scale(1.5);
+   }
+}
+
+.text{
+  /*wrapperの中身を上下中央揃え*/
+  font-family:serif;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding-top:150px;
+  width: 80%;
+  height: auto;
+    color: #fff;
+    font-size:50px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+/*手すきと２こめ*/
+
+@import url(https://fonts.googleapis.com/css?family=Hind:700);
+
+span {
+  color: transparent;
+  animation: blur 10s ease-out infinite;
+
+  -webkit-animation: blur 10s ease-out infinite;
+}
+
+span:nth-child(1) {
+  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+}
+span:nth-child(2) {
+  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+}
+span:nth-child(3) {
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+}
+span:nth-child(4) {
+  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+}
+span:nth-child(5) {
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+}
+span:nth-child(6) {
+  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+}
+span:nth-child(7) {
+  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+}
+
+@keyframes blur {
+  0%    {text-shadow:  0 0 100px #fff; opacity:0;}
+  5%    {text-shadow:  0 0 90px #fff;}
+  15%   {opacity: 1;}
+  20%   {text-shadow:  0 0 0px #fff;}
+  80%   {text-shadow:  0 0 0px #fff;}
+  85%   {opacity: 1;}
+  95%   {text-shadow:  0 0 90px #fff;}
+  100%  {text-shadow:  0 0 100px #fff; opacity:0;}
+}
+
+@-webkit-keyframes blur {
+  0%    {text-shadow:  0 0 100px #fff; opacity:0;}
+  5%    {text-shadow:  0 0 90px #fff;}
+  15%   {opacity: 1;}
+  20%   {text-shadow:  0 0 0px #fff;}
+  80%   {text-shadow:  0 0 0px #fff;}
+  85%   {opacity: 1;}
+  95%   {text-shadow:  0 0 90px #fff;}
+  100%  {text-shadow:  0 0 100px #fff; opacity:0;}
+}
+
+

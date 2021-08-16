@@ -1,0 +1,35 @@
+
+.content_desi
+ {
+    display: flex;
+    flex-wrap: wrap;
+	color: #999;
+	text-align: center;
+}
+
+.desi_box1 {
+    background: #eee;
+	width: 40%;
+position: relative;
+
+ padding: 1em;
+ min-width: 300px;
+
+}
+.desi_box2 {
+    background: #eee;
+	width: 40%;
+position: relative;
+ min-width: 300px;
+ padding: 1em;
+  background-image:url("./ma.jpg");
+    background-repeat: no-repeat;
+}
+
+
+.fadeIn {
+animation-name: fadeInAnime;
+animation-duration:3s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
