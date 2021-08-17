@@ -37,6 +37,7 @@ img{
     flex-wrap: wrap;
 	color: #999;
 	text-align: center;
+
 }
 
 .desi_box1 {
@@ -130,7 +131,7 @@ opacity: 0;
 
 
 
-/*手すきと２こめ*/
+/*テキスト２こめ*/
 
 @import url(https://fonts.googleapis.com/css?family=Hind:700);
 
@@ -193,3 +194,10 @@ span:nth-child(7) {
 }
 
 
+@media screen and (max-width: 768px) {
+.desi_box1 {
+    background: #eee;
+	width: 90%;
+position: relative;
+}
+}
