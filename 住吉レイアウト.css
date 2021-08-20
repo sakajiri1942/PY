@@ -126,78 +126,82 @@ opacity: 0;
 }
 
 
+.top_page1{
+background-image:url("./top_02.png");
+width: 800px;
+height: 300px;
+background-repeat: no-repeat;
+padding-top:150px;
+padding-left:33px;
 
-
-
-
-
-/*テキスト２こめ*/
-
-@import url(https://fonts.googleapis.com/css?family=Hind:700);
-
-span {
-  color: transparent;
-  animation: blur 10s ease-out infinite;
-
-  -webkit-animation: blur 10s ease-out infinite;
-}
-
-span:nth-child(1) {
-  animation-delay: 0.1s;
-  -webkit-animation-delay: 0.1s;
-}
-span:nth-child(2) {
-  animation-delay: 0.2s;
-  -webkit-animation-delay: 0.2s;
-}
-span:nth-child(3) {
-  animation-delay: 0.3s;
-  -webkit-animation-delay: 0.3s;
-}
-span:nth-child(4) {
-  animation-delay: 0.4s;
-  -webkit-animation-delay: 0.4s;
-}
-span:nth-child(5) {
-  animation-delay: 0.5s;
-  -webkit-animation-delay: 0.5s;
-}
-span:nth-child(6) {
-  animation-delay: 0.6s;
-  -webkit-animation-delay: 0.6s;
-}
-span:nth-child(7) {
-  animation-delay: 0.7s;
-  -webkit-animation-delay: 0.7s;
-}
-
-@keyframes blur {
-  0%    {text-shadow:  0 0 100px #fff; opacity:0;}
-  5%    {text-shadow:  0 0 90px #fff;}
-  15%   {opacity: 1;}
-  20%   {text-shadow:  0 0 0px #fff;}
-  80%   {text-shadow:  0 0 0px #fff;}
-  85%   {opacity: 1;}
-  95%   {text-shadow:  0 0 90px #fff;}
-  100%  {text-shadow:  0 0 100px #fff; opacity:0;}
-}
-
-@-webkit-keyframes blur {
-  0%    {text-shadow:  0 0 100px #fff; opacity:0;}
-  5%    {text-shadow:  0 0 90px #fff;}
-  15%   {opacity: 1;}
-  20%   {text-shadow:  0 0 0px #fff;}
-  80%   {text-shadow:  0 0 0px #fff;}
-  85%   {opacity: 1;}
-  95%   {text-shadow:  0 0 90px #fff;}
-  100%  {text-shadow:  0 0 100px #fff; opacity:0;}
 }
 
 
 @media screen and (max-width: 768px) {
-.desi_box1 {
-    background: #eee;
+.top_page1{
+background-image:url("./top_04.png");
+width: 100%;
+height: 20px;
+background-repeat: no-repeat;
+
+}
+
+
+.top_page2{
+background-image:url("./top_03.png");
+width: 100%;
+height: 300px;
+	width: 90%;
+	margin-left:33px;
+	background-repeat: no-repeat;
+}
+}
+
+
+
+
+
+
+
+.desi_news1 {
+    background: #fff;
+	width: 25%;
+position: relative;
+}
+.desi_news2 {
+    background: #fff;
+	width: 60%;
+position: relative;
+}
+
+@media screen and (max-width: 768px) {
+.desi_news1 {
+    background: #fff;
 	width: 90%;
 position: relative;
 }
+.desi_news2 {
+    background: #fff;
+	width: 90%;
+position: relative;
+}
+}
+
+.teset222{
+background:url(top_03.png);
+  width : 200px; /* contents-layerと同じ大きさにする */
+  height : 100px; /* contents-layerと同じ大きさにする */
+}
+
+
+
+
+.fade-layer{
+  width : 100%; /* contents-layerと同じ大きさにする */
+  height : 100px; /* contents-layerと同じ大きさにする */
+  background : url(top_03.png) no-repeat 0 0;
+  position : absolute;
+
+  z-index : -1;
+  opacity : 0;
 }

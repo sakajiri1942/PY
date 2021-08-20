@@ -1,29 +1,24 @@
-ul{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	max-width: 750px;
-	margin: 0 auto;
-	padding: 50px 25px;
-}
-li{
-	width: 48%;
-	margin: 0 0 100px;
-}
-img{
-	width: 100%;
-	height: auto;
-}
-/*アニメーション要素のスタイル*/
-.animation{
-	opacity : 0;
-	visibility: hidden;
-	transition: 4s;
-	transform: translateY(30px);
-}
-/*アニメーション要素までスクロールした時のスタイル*/
-.active{
-	opacity: 1;
-	visibility: visible;
-	transform: translateY(0);
-}
+.example {/*親div*/
+  position: relative;
+  }
+
+.example p {
+  position: absolute;
+  color: white;/*文字は白に*/
+  font-weight: bold; /*太字に*/
+  font-size: 2em;/*サイズ2倍*/
+  font-family :Quicksand, sans-serif;/*Google Font*/
+  top: 0;
+  left: 0;
+    top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  }
+
+.example img {
+  width: 100%;
+  }

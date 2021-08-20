@@ -1,0 +1,19 @@
+.fade-layer{
+  width : 100%;
+  height : 500px;
+  background : url(top_03.png) no-repeat 0 0;
+  position : absolute;
+
+  z-index : -1;
+  opacity : 0;
+}
+
+.top_page1{
+  width : 100%;
+  height : 500px;
+    background-image:url(img/top_02.png) no-repeat 0 0;
+  position : absolute;
+
+  z-index : -1;
+  opacity : 0;
+}
