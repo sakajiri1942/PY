@@ -1,0 +1,59 @@
+.aaa{
+    font-size:40px;
+
+}
+
+
+
+
+
+.content_subpage
+ {
+    display: flex;
+    flex-wrap: wrap;
+}
+.subpage1{
+
+}
+.subpage2{
+
+}
+
+.subpage_title{
+    font-size:40px;
+}
+
+.subpage_bunsyou{
+    font-size:20px;
+    color: #333;
+}
+
+
+
+
+
+
+.example {/*親div*/
+  position: relative;
+  }
+
+.example p {
+  position: absolute;
+  color: white;/*文字は白に*/
+  font-weight: bold; /*太字に*/
+  font-size: 2em;/*サイズ2倍*/
+  font-family :Quicksand, sans-serif;/*Google Font*/
+  top: 0;
+  left: 0;
+    top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  }
+
+.example img {
+  width: 100%;
+  }
