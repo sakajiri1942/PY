@@ -1,8 +1,14 @@
-.oya{
-    width:100%;
-  display: flex;
-  flex-wrap: wrap;
+.ccc:first-letter{
+  color:red;
+  font-size:200%;
 }
-.ko{
-    width:400px;
+
+
+.ddd{
+    position: relative;
+}
+
+
+.eee{
+    position: absolute;top:150px; left:100px ;
 }
