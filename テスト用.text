@@ -1,1 +1,166 @@
-&lt;a href="c.html#aco">osu&lt;/a>
+<$ AllStrReplace(<h2>(.*?)</h2>,<h2><span>$1</span></h2>) $>
+<$ AllStrReplace(<h3>(.*?)</h3>,<h3><span>$1</span></h3>) $>
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="<% publishCharset %>" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title><% pageTitle %></title>
+<meta name="keywords" content="<% metaKeywords %>" />
+<meta name="description" content="<% metaDescription %>" />
+<link rel="stylesheet" href="<% pageDepth %>styles.css" type="text/css" />
+<link rel="stylesheet" href="<% pageDepth %>css/textstyles.css" type="text/css" />
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<% scriptUrl %>
+<% pageStyles %>
+<% headTag %>
+<% rssFeedLink %>
+<% googleSitemapTag %>
+<% mobileLinkDiscovery %>
+</head>
+<body>
+<div class="ttt"></div>
+<div id="wrapper">
+
+<header id="header">
+<div id="top">
+<div class="inner">
+<% headerText | tag_insert(a href="<% pageDepth %>") | tag_insert(h2 class="title") %>
+</div>
+<input type="checkbox" id="panel" value="" />
+<label for="panel" id="topmenubtn">MENU</label>
+<div id="topmenubox"><div id="topmenubox-inner">
+<% searchTag | str_replace(<!-- ★comment★ -->,) | str_replace(text,search) | str_replace(image,submit) | tag_insert(div id="searchbox") %>
+<% topMenu2 | tag_replace(div,nav) %>
+<div id="topsubmenu">
+</div>
+</div></div>
+</div>
+
+<!-- ★ヘッダー画像エリアここから★ -->
+<div id="headerbox">
+<div id="header"><% pageHeaderImage2 %></div>
+</div>
+
+<!-- ★ヘッダー画像エリアここまで★ -->
+</header>
+
+
+<div id="column1">
+<div id="contents">
+<div id="layoutbox">
+<div id="main">
+
+<!-- ★コンテンツここから★ -->
+<% freeSpace1 %>
+<% articleStart %>
+
+<% textTitle1 %>
+<% textBody1 %>
+<% textTitle2 %>
+<% textBody2 %>
+<% textTitle3 %>
+<% textBody3 %>
+<% textTitle4 %>
+<% textBody4 %>
+<% textTitle5 %>
+<% textBody5 %>
+<% textTitle6 %>
+<% textBody6 %>
+<% textTitle7 %>
+<% textBody7 %>
+<% textTitle8 %>
+<% textBody8 %>
+<% textTitle9 %>
+<% textBody9 %>
+<% textTitle10 %>
+<% textBody10 %>
+
+<% articleEnd %>
+<% freeSpace2 %>
+<!-- ★コンテンツここまで★ -->
+
+
+<% if:siteMode(normal) %>
+
+<!-- ★更新履歴ここから★ -->
+<% whatsNew | str_replace(<a,<span><a) | str_replace(</li>,</span></li>) | tag_put(<div class="title"><span>更新履歴</span></div>) | tag_insert(div id="whatsnew") %>
+<!-- ★更新履歴ここまで★ -->
+
+<% else %>
+
+<!-- ★ブログモードここから★ -->
+<% AQNewEntries(10) %>
+<article class="blog">
+<% pageThumbnail | tag_insert(a href="{% permaLink %}") | tag_insert(div class="thumb") %>
+<div class="title"><a href="<% permaLink %>"><% pageTitle %></a></div>
+<div class="info"><time><% pagePublicDate | parseDatetime(yyyy/MM/dd HH:mm:dd) %></time> <% parentPageList_all | tag_insert(span class="plist") %></div>
+<div class="body"><% pageBody | tag_strip | str_replace(&nbsp;,) | oneline | shorten(150,true) | tag_insert(p) %><div class="more"><a href="<% permaLink %>">≫この記事の続きを読む</a></div></div>
+</article>
+<% /AQNewEntries %>
+<!-- ★ブログモードここまで★ -->
+
+<% /if %>
+</div>
+
+<!-- ★メインメニューここから★ -->
+<div id="menu">
+
+<% freeSpace3 | tag_replace(h4,div class="title") | tag_insert_inner(div class="title",span) %>
+<% pickupEntry %>
+<% siteMenu2 %>
+<% freeSpace4 | tag_replace(h4,div class="title") | tag_insert_inner(div class="title",span) %>
+
+</div>
+<!-- ★メインメニューここまで★ -->
+
+</div>
+</div>
+</div>
+
+<div id="pagetop"><a href="#wrapper">トップへ戻る</a></div>
+
+
+<!-- ★フッターここから★ -->
+<footer id="footer">
+
+<div class="footer_long">
+<div class="futall">
+<div class="futcont">
+<div class="futch_gazou">
+<a href="https://sumiyoshi.red/">
+<img src="<% pageDepth %>img/mark.png" alt="消防車" /></a>
+<a href="https://sumiyoshi.red/"><img src="<% pageDepth %>img/sumiyosi_siro.png" alt="消防車" /></a>
+</div>
+	<div class="futch"><a href="<% pageDepth %>fireextinguishing/index.php">消火活動</a></div>
+	<div class="futch"><a href="<% pageDepth %>rescue/index.php">救済活動</a></div>
+	<div class="futch"><a href="<% pageDepth %>enlightenment/index.php">啓発活動</a></div>
+	<div class="futch"><a href="<% pageDepth %>equipment/index.php">装備操作</a></div>
+	<div class="futch"><a href="<% pageDepth %>fire/index.php">火事の時</a></div>
+	<div class="futch"><a href="<% pageDepth %>clothes/index.php">活動服</a></div>
+	<div class="futch"><a href="<% pageDepth %>other/index.php">その他</a></div>
+</div>
+<div class="futunder"> </div>
+</div>
+</div>
+
+<div class="inner">
+<% footerMenu | str_replace(<div id="footermenu">,) | str_replace(</div>,) %>
+<% PRLink | tag_insert(span) %>
+<% sitemapPageLink | tag_insert(span) %>
+<% pageDescription2 | str_replace(id="headertext",class="desc") %>
+<small>Copyright &copy; <% thisYear %> <% siteTitle %>All Rights Reserved.<% accessAnalyzer %></small>
+
+</div>
+
+</footer>
+<!-- ★フッターここまで★ -->
+</div>
+<% module(hyouzi) %>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<% module(フェードイン) %>
+<% module(メニュー固定) %>
+<% module(スクロールでクラス削除) %>
+</body>
+</html>
